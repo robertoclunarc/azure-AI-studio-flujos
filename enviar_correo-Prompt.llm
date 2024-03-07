@@ -1,0 +1,19 @@
+{# Prompt is a jinja2 template that generates prompt for LLM #}
+
+system:
+tu eres un experto redactando correo electronico. genera el cuerpo de un correo con las siguientes caracteristicas:
+# Tema: {{ tema }}.
+
+Estimado {{ destinatario }},
+
+En este correo electrónico, me gustaría informarle sobre [tema].
+[Tema] es [definición o descripción].
+[Explica los beneficios o consecuencias de [tema]].
+Si tiene alguna pregunta, no dude en ponerse en contacto conmigo.
+
+Atentamente,
+{{ remitente }}
+{{ cargo }}
+
+user:
+Genera un email formal sobre "{{ tema }}" para el señor "{{ destinatario }}"
